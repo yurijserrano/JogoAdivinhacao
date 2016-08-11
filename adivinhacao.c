@@ -3,6 +3,11 @@
 
 int main(){
 
-	printf("Bem Vindo ao nosso jogo de adivinhação");
+	/*
+		Imprime o cabeçalho do jogo
+	*/
+	printf("******************************************\n");
+	printf("* Bem Vindo ao nosso jogo de adivinhação *\n");
+	printf("******************************************\n");
 	return 0;
 }
