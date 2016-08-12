@@ -1,7 +1,17 @@
 #include <stdio.h>
+#include <locale.h>
 
 
 int main(){
+
+
+
+
+	
+	/*
+		Corrige a acentuação no terminal
+	*/
+	setlocale(LC_ALL, “Portuguese”);
 
 
 	/*
