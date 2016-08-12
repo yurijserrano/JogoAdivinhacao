@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <locale.h>
 
 
@@ -7,11 +8,11 @@ int main(){
 
 
 
-	
+
 	/*
 		Corrige a acentuação no terminal
 	*/
-	setlocale(LC_ALL, “Portuguese”);
+	setlocale(LC_ALL, "");
 
 
 	/*
@@ -26,9 +27,17 @@ int main(){
 
 	//printf("O número %d é o secreto. Não Conta pra ninguém\n",numeroSecreto);
 
-	printf("Qual é o sue chute?");
+	printf("Qual %c o seu chute?",130);
 	scanf("%d",&chute);
 	printf("Seu chute foi %d",chute);
+
+	if(chute == numeroSecreto){
+		printf("Parabéns Você Acertou !!!!!!!\n");
+		printf("Jogue Novamente, você é um bom jogador !!!!\n");
+	}
+	else{
+		printf("Número Errado!!!!!! Tente Novamente\n");
+	}
 
 	return 0;
 }
