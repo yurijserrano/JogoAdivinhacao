@@ -12,7 +12,7 @@ int main(){
 	/*
 		Corrige a acentuação no terminal
 	*/
-	setlocale(LC_ALL, "");
+	setlocale(LC_ALL, "Portuguese");
 
 
 	/*
@@ -24,27 +24,41 @@ int main(){
 
 	int numeroSecreto = 42;
 	int chute =0;
+	
+	int i ;
 
 	//printf("O número %d é o secreto. Não Conta pra ninguém\n",numeroSecreto);
 
-	printf("Qual %c o seu chute?",130);
-	scanf("%d",&chute);
-	printf("Seu chute foi %d",chute);
 
-	if(chute == numeroSecreto){
-		printf("Parabéns Você Acertou !!!!!!!\n");
-		printf("Jogue Novamente, você é um bom jogador !!!!\n");
-	}
-	else{
-		if(chute > numeroSecreto)
+	for(i = 1; i<=3 ;i++)
+	{
+
+		printf("Tentativa %d de 3\n",i);
+		printf("Qual é o seu chute?");
+		scanf("%d",&chute);
+		printf("Seu chute foi %d",chute);
+		int acertou = (chute == numeroSecreto);
+		
+		if(acertou)
 		{
-			printf("Seu chute foi maior que o número secreto\n");
+			printf("Parabéns Você Acertou !!!!!!!\n");
+			printf("Jogue Novamente, você é um bom jogador !!!!\n");
 		}
-		if(chute < numeroSecreto)
+		else
 		{
-			printf("Seu chute foi menor que o número secreto\n");
+
+			int maior = chute > numeroSecreto;
+			if(maior)
+			{
+				printf("Seu chute foi maior que o número secreto\n");
+			}
+			else
+			{
+				printf("Seu chute foi menor que o número secreto\n");
+			}
+		
+		
 		}
-		printf("Número Errado!!!!!! Tente Novamente\n");
 	}
 
 	return 0;
